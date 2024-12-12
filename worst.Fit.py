@@ -51,3 +51,34 @@ class WorstFitAllocator:
             else:
                 status = "Free"
             print(f"Block {i + 1}: {block.free} KB free ({status}).")
+
+
+block_sizes = [100, 500, 200, 300, 600]
+blocks = [MemoryBlock(size) for size in block_sizes]
+
+allocator = WorstFitAllocator(blocks)
+
+print("Initial Memory State:")
+allocator.display_memory_state()
+
+while True:
+    print("\nOptions:")
+    print("1. Allocate")
+    print("2. Deallocate")
+    print("3. Exit")
+    choice = int(input("Enter your choice (1/2/3): "))
+
+    if choice == 1:
+        process_name = input("Enter the name of the process to allocate: ")
+        process_size = int(input("Enter the size of the process in KB: "))
+        allocator.allocate(process_name, process_size)
+        allocator.display_memory_state()
+    elif choice == 2:
+        process_name = input("Enter the name of the process to deallocate: ")
+        allocator.deallocate(process_name)
+        allocator.display_memory_state()
+    elif choice == 3:
+        print("Exiting program.")
+        break
+    else:
+        print("Invalid choice. Please try again.")
