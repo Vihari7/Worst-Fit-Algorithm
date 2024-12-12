@@ -32,4 +32,14 @@ class WorstFitAllocator:
         else:
             print(f"Process {process_name} could not be allocated. No suitable block found.")
 
+    def deallocate(self, process_name):
+        print(f"\nDeallocating {process_name}:")
+        if process_name in self.process_allocation:
+            block_index, size = self.process_allocation.pop(process_name)
+            block = self.blocks[block_index - 1]
+            block.allocated_to.remove(process_name)
+            block.free += size
+            print(f"Process {process_name} deallocated from Block {block_index}.")
+        else:
+            print(f"Process {process_name} not found in any block.")
 
