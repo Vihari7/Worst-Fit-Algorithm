@@ -43,3 +43,11 @@ class WorstFitAllocator:
         else:
             print(f"Process {process_name} not found in any block.")
 
+    def display_memory_state(self):
+        print("\nMemory State:")
+        for i, block in enumerate(self.blocks):
+            if block.allocated_to:
+                status = f"Allocated to {', '.join(block.allocated_to)}"
+            else:
+                status = "Free"
+            print(f"Block {i + 1}: {block.free} KB free ({status}).")
