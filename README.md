@@ -8,26 +8,26 @@ This project implements the **Worst Fit algorithm** for dynamic memory allocatio
 ---
 
 ## 🛠️ **Features**
-- ✅ Accepts user input for process sizes and block sizes.
-- ✅ Allocates memory using the Worst Fit strategy.
-- ✅ Deallocates memory for reusability.
-- ✅ Displays the current state of memory after each operation.
-- ✅ Handles errors when no suitable block is found.
+-  Accepts user input for process sizes and block sizes.
+-  Allocates memory using the Worst Fit strategy.
+-  Deallocates memory for reusability.
+-  Displays the current state of memory after each operation.
+-  Handles errors when no suitable block is found.
 
 ---
 
 ## ⚠️ **Limitations**
-- 🚫 Assumes memory block sizes remain fixed.
-- 🚫 Does not support preemptive allocation.
-- 🚫 All blocks are independent; no merging of adjacent free blocks is implemented.
+-  Assumes memory block sizes remain fixed.
+-  Does not support preemptive allocation.
+-  All blocks are independent; no merging of adjacent free blocks is implemented.
 
 ---
 
 ## 📜 **Assumptions**
-- 📝 Memory blocks are fixed in size and do not overlap.
-- 📝 Processes request memory in kilobytes (KB).
-- 📝 Each process has a unique identifier.
-- 📝 Memory allocation is non-preemptive; allocated memory remains in use until explicitly deallocated.
+-  Memory blocks are fixed in size and do not overlap.
+-  Processes request memory in kilobytes (KB).
+-  Each process has a unique identifier.
+-  Memory allocation is non-preemptive; allocated memory remains in use until explicitly deallocated.
 
 ---
 
@@ -35,12 +35,12 @@ This project implements the **Worst Fit algorithm** for dynamic memory allocatio
 1. **Initialization**: Memory blocks are defined with fixed sizes.
 2. **User Interaction**: Provides a menu for allocation, deallocation, and exiting.
 3. **Allocation**:
-   - 🔍 Finds the largest memory block that can fit the requested process size.
-   - ✅ Allocates the process to the block and updates its free space.
+   -  Finds the largest memory block that can fit the requested process size.
+   -  Allocates the process to the block and updates its free space.
 4. **Deallocation**:
-   - 🔓 Frees the memory used by a process and updates the block's free space.
+   -  Frees the memory used by a process and updates the block's free space.
 5. **Display**:
-   - 📊 Shows the current memory state, including free and allocated blocks.
+   -  Shows the current memory state, including free and allocated blocks.
 
 ---
 
@@ -61,7 +61,7 @@ This project implements the **Worst Fit algorithm** for dynamic memory allocatio
    ```
 3. Run the application:
    ```bash
-   python filename.py  # Replace `filename.py` with the main Python file name.
+   python worst_Fit.py  
    ```
 
 ---
@@ -87,9 +87,9 @@ This project implements the **Worst Fit algorithm** for dynamic memory allocatio
 ---
 
 ## 🔮 **Future Enhancements**
-- 🌈 Add a graphical user interface (GUI) for better interaction.
-- 🧩 Support merging of adjacent free memory blocks.
-- 📊 Compare performance with other allocation strategies like Best Fit and First Fit.
-- ⏱️ Implement real-time memory allocation and deallocation.
+- Add a graphical user interface (GUI) for better interaction.
+- Support merging of adjacent free memory blocks.
+- Compare performance with other allocation strategies like Best Fit and First Fit.
+- Implement real-time memory allocation and deallocation.
 
 ---
