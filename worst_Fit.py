@@ -8,11 +8,6 @@ class MemoryBlock:
 # Define a class for the Worst Fit Allocator
 class WorstFitAllocator:
     def __init__(self, blocks):
-        self.blocks = blocks1
-        self.process_allocation = {}
-
-class WorstFitAllocator:
-    def __init__(self, blocks):
         self.blocks = blocks
         self.process_allocation = {}  # Dictionary to track process allocation
     
